@@ -95,7 +95,7 @@
         .about-text { padding: 80px 60px; }
         .about-text h2 { font-size: 2.8rem; font-weight: 900; margin-bottom: 20px; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .about-text p { font-size: 1.1rem; color: var(--gray); margin-bottom: 20px; line-height: 1.8; font-weight: 400; }
-        .about-img { background: url('https://i.postimg.cc/CMNRdsxc/CO-1.png') center/cover; }
+        .about-img { background: url('Imagenes/CO_1.png') center/cover; }
 
         .reviews-section { margin-top: 40px; }
         .reviews-grid { display: grid; grid-template-columns: 1.2fr 2fr; gap: 40px; align-items: start; }
@@ -175,10 +175,16 @@
         .modal-opt-select { width: 100%; padding: 12px 15px; border-radius: 15px; border: 2px solid rgba(0,0,0,0.05); font-family: inherit; font-size: 0.95rem; font-weight: 600; color: var(--dark); outline: none; background: var(--light-bg); transition: 0.3s; cursor: pointer; }
         .modal-opt-select:focus { border-color: var(--magenta); box-shadow: 0 0 0 4px rgba(230,0,126,0.1); background: var(--white); }
 
-        .qty-control { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; background: var(--white); padding: 5px; border-radius: 50px; width: fit-content; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .qty-control { display: flex; align-items: center; gap: 15px; margin-bottom: 10px; background: var(--white); padding: 5px; border-radius: 50px; width: fit-content; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .qty-btn { width: 40px; height: 40px; border: none; background: transparent; border-radius: 50%; cursor: pointer; font-weight: 700; font-size: 1.2rem; color: var(--dark); transition: 0.3s; }
         .qty-btn:hover { background: var(--grad-glass); color: var(--magenta); }
-        .qty-input { width: 40px; height: 40px; text-align: center; border: none; background: transparent; font-weight: 700; font-size: 1.1rem; color: var(--dark); outline: none; }
+        
+        .qty-input { width: 50px; height: 40px; text-align: center; border: none; background: transparent; font-weight: 700; font-size: 1.1rem; color: var(--dark); outline: none; -moz-appearance: textfield; }
+        .qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        
+        .qty-presets { display: flex; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
+        .qty-chip { background: var(--light-bg); border: 1px solid rgba(0,0,0,0.05); padding: 6px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--gray); cursor: pointer; transition: 0.3s; }
+        .qty-chip:hover { background: var(--grad-glass); color: var(--magenta); border-color: var(--magenta); }
 
         .modal-actions { display: flex; flex-direction: column; gap: 12px; }
         
@@ -386,7 +392,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="https://i.postimg.cc/Wpndtw19/logo.png" alt="Merlty"></a>
+                <a href="#"><img src="Imagenes/logo.png" alt="Merlty"></a>
             </div>
             <nav>
                 <ul>
@@ -414,7 +420,7 @@
         <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
         <div class="mobile-menu-panel">
             <div class="mmenu-header">
-                <img src="https://i.postimg.cc/Wpndtw19/logo.png" alt="Merlty">
+                <img src="Imagenes/logo.png" alt="Merlty">
                 <p>Impresión · Diseño · Fotografía</p>
                 <button class="mobile-menu-close" onclick="closeMobileMenu()"><i class="fa-solid fa-xmark"></i></button>
             </div>
@@ -451,11 +457,11 @@
 
     <section class="carousel">
         <div class="carousel-track" id="cTrack">
-            <div class="slide" style="background-image: url('https://i.postimg.cc/J7qst5zB/C-1.png');">
+            <div class="slide" style="background-image: url('Imagenes/C_1.png');">
             </div>
-            <div class="slide" style="background-image: url('https://i.postimg.cc/mZwPhyg7/C-2.png');">
+            <div class="slide" style="background-image: url('Imagenes/C_2.png');">
             </div>
-            <div class="slide" style="background-image: url('https://i.postimg.cc/RCRWqLZ7/C-3.png');">
+            <div class="slide" style="background-image: url('Imagenes/C_3.png');">
             </div>
         </div>
         <div class="carousel-dots">
@@ -497,7 +503,7 @@
             </div>
             <div class="prod-grid" id="productGrid"></div>
             <div style="text-align: center; margin-top: 60px; display: flex; justify-content: center;">
-				<a href="https://24myh.github.io/Catalogo" target="_blank" class="btn-grad" style="font-size: 1.1rem; padding: 15px 40px;">
+                <a href="https://wa.me/51978419756?text=Hola%20Merlty,%20deseo%20ver%20el%20cat%C3%A1logo%20completo%20de%20productos." target="_blank" class="btn-grad" style="font-size: 1.1rem; padding: 15px 40px;">
                     <i class="fa-solid fa-book-open" style="margin-right: 10px;"></i> Ver Catálogo
                 </a>
             </div>
@@ -510,16 +516,16 @@
                 <h2>Explora por <span>Categorías</span></h2>
             </div>
             <div class="cat-grid">
-                <div class="cat-box" style="background-image: url('https://i.postimg.cc/Y23vjzC1/CA-1.png');" onclick="document.getElementById('tienda').scrollIntoView();">
+                <div class="cat-box" style="background-image: url('Imagenes/CA_1.png');" onclick="document.getElementById('tienda').scrollIntoView();">
                     <div class="cat-content"><h3>Fotografía</h3></div>
                 </div>
-                <div class="cat-box" style="background-image: url('https://i.postimg.cc/qBLNgxvX/CA-2.png');" onclick="document.getElementById('tienda').scrollIntoView();">
+                <div class="cat-box" style="background-image: url('Imagenes/CA_2.png');" onclick="document.getElementById('tienda').scrollIntoView();">
                     <div class="cat-content"><h3>Tazas Personalizadas</h3></div>
                 </div>
-                <div class="cat-box" style="background-image: url('https://i.postimg.cc/mZwPhygV/CA-3.png');" onclick="document.getElementById('tienda').scrollIntoView();">
+                <div class="cat-box" style="background-image: url('Imagenes/CA_3.png');" onclick="document.getElementById('tienda').scrollIntoView();">
                     <div class="cat-content"><h3>Cuadros Decorativos</h3></div>
                 </div>
-                <div class="cat-box" style="background-image: url('https://i.postimg.cc/y6PDWy8j/CA-4.png');" onclick="document.getElementById('tienda').scrollIntoView();">
+                <div class="cat-box" style="background-image: url('Imagenes/CA_4.png');" onclick="document.getElementById('tienda').scrollIntoView();">
                     <div class="cat-content"><h3>Papelería Corporativa</h3></div>
                 </div>
             </div>
@@ -668,7 +674,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <img src="https://i.postimg.cc/Wpndtw19/logo.png" alt="Merlty">
+                        <img src="Imagenes/logo.png" alt="Merlty">
                     </div>
                     <p style="color: var(--gray); margin-bottom: 25px; font-weight: 400;">Estudio integral de diseño, impresión y fotografía.</p>
                     <div class="socials">
@@ -736,10 +742,33 @@
                 
                 <div id="mOptionsContainer"></div>
 
+                <div class="prod-option" style="margin-bottom: 20px;">
+                    <label style="font-weight: 700; font-size: 0.9rem; margin-bottom: 8px; display: block; color: var(--dark);">Color / Variación (Elige o escribe el tuyo)</label>
+                    <input type="text" id="mColorInput" list="colorList" class="modal-opt-select" placeholder="Ej. Negro, Azul Marino..." autocomplete="off">
+                    <datalist id="colorList">
+                        <option value="Blanco"></option>
+                        <option value="Negro"></option>
+                        <option value="Rojo"></option>
+                        <option value="Azul"></option>
+                        <option value="Verde"></option>
+                        <option value="Amarillo"></option>
+                        <option value="Rosado"></option>
+                        <option value="Celeste"></option>
+                        <option value="Gris"></option>
+                    </datalist>
+                </div>
+
                 <div class="qty-control">
                     <button class="qty-btn" onclick="updateQtyUI(-1)">-</button>
-                    <input type="number" class="qty-input" id="mQty" value="1" min="1" readonly>
+                    <input type="number" class="qty-input" id="mQty" value="1" min="1" onchange="validateQty()">
                     <button class="qty-btn" onclick="updateQtyUI(1)">+</button>
+                </div>
+                
+                <div class="qty-presets">
+                    <button class="qty-chip" onclick="setQtyUI(12)">1 Docena (12)</button>
+                    <button class="qty-chip" onclick="setQtyUI(50)">Medio Ciento (50)</button>
+                    <button class="qty-chip" onclick="setQtyUI(100)">1 Ciento (100)</button>
+                    <button class="qty-chip" onclick="setQtyUI(1000)">1 Millar (1000)</button>
                 </div>
                 
                 <div class="modal-actions">
@@ -926,8 +955,8 @@
                 title: "Tazas Personalizadas", 
                 basePrice: 0, 
                 desc: "Personaliza tus tazas con logos, fotos o mensajes especiales. Elige el modelo y el color interior que más te guste.", 
-                img: "https://i.postimg.cc/8kH7smzX/PR-1.png", 
-                gallery: ["https://i.postimg.cc/8kH7smzX/PR-1.png", "https://i.postimg.cc/nVkXMGhw/PR-1-1.png"],
+                img: "Imagenes/PR_1.png", 
+                gallery: ["Imagenes/PR_1.png", "Imagenes/PR_1_1.png"],
                 options: [
                     {
                         label: "Modelo de Taza",
@@ -938,10 +967,10 @@
                         ]
                     },
                     {
-                        label: "Color Interior",
+                        label: "Color Interior (Base)",
                         choices: [
                             { label: "Blanco Estándar", price: 0.00 },
-                            { label: "Rojo / Azul / Negro", price: 5.00 }
+                            { label: "Color Especial", price: 5.00 }
                         ]
                     }
                 ]
@@ -951,8 +980,8 @@
                 title: "Cuadros Canvas Decorativos", 
                 basePrice: 0, 
                 desc: "Impresión en lienzo Canvas 100% algodón montado sobre bastidor de madera de pino. Selecciona la medida y el tipo de marco ideal para tu espacio.", 
-                img: "https://i.postimg.cc/kMc2DvgZ/PR-2.png", 
-                gallery: ["https://i.postimg.cc/kMc2DvgZ/PR-2.png", "https://i.postimg.cc/J7qst5zS/PR-2-1.png"],
+                img: "Imagenes/PR_2.png", 
+                gallery: ["Imagenes/PR_2.png", "Imagenes/PR_2_1.png"],
                 options: [
                     {
                         label: "Tamaño",
@@ -976,8 +1005,8 @@
                 title: "Millar de Tarjetas Personalizadas", 
                 basePrice: 0, 
                 desc: "1000 tarjetas de presentación en papel couché de 300g. Selecciona los acabados premium para destacar la identidad de tu marca.", 
-                img: "https://i.postimg.cc/QNbFVJML/PR-3.png", 
-                gallery: ["https://i.postimg.cc/QNbFVJML/PR-3.png", "https://i.postimg.cc/DfgSmPzk/PR-3-1.png"],
+                img: "Imagenes/PR_3.png", 
+                gallery: ["Imagenes/PR_3.png", "Imagenes/PR_3_1.png"],
                 options: [
                     {
                         label: "Acabado de Impresión",
@@ -1001,8 +1030,8 @@
                 title: "Cuadros Fotográficos", 
                 basePrice: 0, 
                 desc: "Tus mejores momentos inmortalizados en cuadros fotográficos de alta resolución con protección especial.", 
-                img: "https://i.postimg.cc/9FQr9wDn/PR-4.png", 
-                gallery: ["https://i.postimg.cc/9FQr9wDn/PR-4.png", "https://i.postimg.cc/28SVWL19/PR-4-1.png"],
+                img: "Imagenes/PR_4.png", 
+                gallery: ["Imagenes/PR_4.png", "Imagenes/PR_4_1.png"],
                 options: [
                     {
                         label: "Material Base",
@@ -1027,8 +1056,8 @@
                 title: "Poleras Personalizadas",
                 basePrice: 0,
                 desc: "Poleras de algodón peinado con sublimación total o estampado frontal. Ideales para uniformes, eventos y regalos corporativos.",
-                img: "https://i.postimg.cc/Wb1hZqDc/PR-5.png",
-                gallery: ["https://i.postimg.cc/Wb1hZqDc/PR-5.png", "https://i.postimg.cc/wTj7NRtK/PR-5-1.png"],
+                img: "Imagenes/PR_5.png",
+                gallery: ["Imagenes/PR_5.png", "Imagenes/PR_5_1.png"],
                 options: [
                     {
                         label: "Tipo de Estampado",
@@ -1052,8 +1081,8 @@
                 title: "Bolsas Ecológicas Personalizadas",
                 basePrice: 0,
                 desc: "Bolsas de tela non-woven o yute con tu logo impreso. Perfectas para eventos, tiendas y campañas de marketing ecológico.",
-                img: "https://i.postimg.cc/3JxdG0yR/PR-6.png",
-                gallery: ["https://i.postimg.cc/3JxdG0yR/PR-6.png", "https://i.postimg.cc/YqChFL4L/PR-6-1.png"],
+                img: "Imagenes/PR_6.png",
+                gallery: ["Imagenes/PR_6.png", "Imagenes/PR_6_1.png"],
                 options: [
                     {
                         label: "Material",
@@ -1064,11 +1093,9 @@
                         ]
                     },
                     {
-                        label: "Cantidad",
+                        label: "Cantidad Base",
                         choices: [
-                            { label: "50 unidades", price: 0.00 },
-                            { label: "100 unidades", price: 30.00 },
-                            { label: "500 unidades", price: 100.00 }
+                            { label: "Desde 50 unidades", price: 0.00 }
                         ]
                     }
                 ]
@@ -1078,8 +1105,8 @@
                 title: "Agendas y Cuadernos Corporativos",
                 basePrice: 0,
                 desc: "Agendas y cuadernos personalizados con tu marca en tapa dura o blanda. Ideales para obsequios empresariales y eventos institucionales.",
-                img: "https://i.postimg.cc/NfCLkGTf/PR-7.png",
-                gallery: ["https://i.postimg.cc/NfCLkGTf/PR-7.png", "https://i.postimg.cc/YqDjz2gr/PR-7-1.png"],
+                img: "Imagenes/PR_7.png",
+                gallery: ["Imagenes/PR_7.png", "Imagenes/PR_7_1.png"],
                 options: [
                     {
                         label: "Tipo de Tapa",
@@ -1103,8 +1130,8 @@
                 title: "Banners y Gigantografías",
                 basePrice: 0,
                 desc: "Impresión en lona, vinilo o mesh de alta resolución para interiores y exteriores. Colores vibrantes y resistentes a la intemperie.",
-                img: "https://i.postimg.cc/SN1jfQ8R/PR-8.png",
-                gallery: ["https://i.postimg.cc/SN1jfQ8R/PR-8.png", "https://i.postimg.cc/WbYtwprJ/PR-8-1.png"],
+                img: "Imagenes/PR_8.png",
+                gallery: ["Imagenes/PR_8.png", "Imagenes/PR_8_1.png"],
                 options: [
                     {
                         label: "Material",
@@ -1186,8 +1213,10 @@
             let selectedOpts = [];
             
             document.querySelectorAll('.modal-opt-select').forEach(sel => {
-                total += parseFloat(sel.value);
-                selectedOpts.push(sel.options[sel.selectedIndex].text.split(' (+S/')[0]);
+                if (sel.tagName.toLowerCase() === 'select') {
+                    total += parseFloat(sel.value);
+                    selectedOpts.push(sel.options[sel.selectedIndex].text.split(' (+S/')[0]);
+                }
             });
             
             const priceEl = document.getElementById('mPrice');
@@ -1200,8 +1229,14 @@
             const product = db[id];
             const priceEl = document.getElementById('mPrice');
             const unitPrice = parseFloat(priceEl.dataset.currentValue);
-            const optString = priceEl.dataset.optionsString;
-            const cartItemId = `${id}_${btoa(optString)}`;
+            let optString = priceEl.dataset.optionsString;
+            const colorInput = document.getElementById('mColorInput').value.trim();
+
+            if (colorInput) {
+                optString = optString ? `${optString} | Color: ${colorInput}` : `Color: ${colorInput}`;
+            }
+
+            const cartItemId = `${id}_${btoa(encodeURIComponent(optString))}`;
 
             const existingItem = cart.find(item => item.cartItemId === cartItemId);
             if (existingItem) {
@@ -1274,6 +1309,7 @@
             document.getElementById('mTitle').innerText = p.title;
             document.getElementById('mDesc').innerText = p.desc;
             document.getElementById('mQty').value = 1;
+            document.getElementById('mColorInput').value = '';
             document.getElementById('mMainImg').style.backgroundImage = `url('${p.gallery[0]}')`;
             
             const thumbsContainer = document.getElementById('mThumbs');
@@ -1323,6 +1359,17 @@
             curr += val;
             if(curr < 1) curr = 1;
             input.value = curr;
+        }
+
+        function validateQty() {
+            const input = document.getElementById('mQty');
+            let val = parseInt(input.value);
+            if(isNaN(val) || val < 1) val = 1;
+            input.value = val;
+        }
+
+        function setQtyUI(val) {
+            document.getElementById('mQty').value = val;
         }
 
         function closeModal(modalId) {
