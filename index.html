@@ -53,7 +53,7 @@
 
         .carousel { position: relative; height: 75vh; min-height: 500px; overflow: hidden; margin: 30px 20px 20px 20px; border-radius: 40px; box-shadow: var(--shadow-glass); }
         .carousel-track { display: flex; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
-        .slide { flex: 0 0 100%; height: 100%; background-size: contain; background-repeat: no-repeat; background-position: center; background-color: var(--light-bg); position: relative; display: flex; align-items: center; justify-content: center; }
+        .slide { flex: 0 0 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; background-color: var(--light-bg); position: relative; display: flex; align-items: center; justify-content: center; }
         .carousel-dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10; background: var(--glass-bg); padding: 10px 20px; border-radius: 50px; backdrop-filter: blur(10px); }
         .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(0,0,0,0.2); cursor: pointer; transition: 0.3s; }
         .dot.active { background: var(--magenta); transform: scale(1.4); }
@@ -95,7 +95,7 @@
         .about-text { padding: 80px 60px; }
         .about-text h2 { font-size: 2.8rem; font-weight: 900; margin-bottom: 20px; background: var(--grad-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .about-text p { font-size: 1.1rem; color: var(--gray); margin-bottom: 20px; line-height: 1.8; font-weight: 400; }
-        .about-img { background: url('https://i.postimg.cc/XJ1pf1Sc/CO-1.png') center/cover; }
+        .about-img { background-size: cover; background-position: center; }
 
         .reviews-section { margin-top: 40px; }
         .reviews-grid { display: grid; grid-template-columns: 1.2fr 2fr; gap: 40px; align-items: start; }
@@ -272,6 +272,9 @@
             .socials { justify-content: center; display: flex; }
             .footer-links li { justify-content: center; }
             .checkout-form-section { border-radius: 30px 30px 0 0; }
+            .about-text { padding: 50px 40px; }
+            .section-title h2 { font-size: 2.2rem; }
+            .cta-section h2 { font-size: 2.5rem; }
         }
         
         .hamburger-btn {
@@ -369,18 +372,63 @@
         .mmenu-footer a { width: 40px; height: 40px; border-radius: 50%; background: var(--light-bg); display: flex; align-items: center; justify-content: center; color: var(--magenta); font-size: 1rem; transition: 0.25s; }
         .mmenu-footer a:hover { background: var(--grad-primary); color: #fff; transform: translateY(-3px); }
 
+        @media (max-width: 768px) {
+            .carousel { height: 50vh; margin: 80px 15px 15px 15px; }
+            .section { padding: 60px 0; }
+            .section-title h2 { font-size: 2rem; }
+            .cta-section { padding: 60px 20px; }
+            .cta-section h2 { font-size: 2rem; }
+            .about-text { padding: 40px 25px; }
+            .about-text h2 { font-size: 2rem; }
+            .reviews-grid { grid-template-columns: 1fr; gap: 30px; }
+            .review-form-card { padding: 25px; }
+            .checkout-form-section { padding: 25px; }
+            .checkout-summary-section { padding: 25px; }
+            .modal-info { padding: 25px; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); padding: 25px; }
+            .trust-item h4 { font-size: 0.9rem; }
+            .trust-item p { font-size: 0.75rem; }
+        }
+
         @media (max-width: 600px) {
             .cat-grid, .prod-grid, .trust-grid, .form-row, .payment-methods { grid-template-columns: 1fr; }
             nav ul { display: none; }
             .hamburger-btn { display: flex; }
-            header { border-radius: 30px; }
-            .carousel { border-radius: 30px; height: 60vh; margin: 90px 15px 15px 15px; }
-            .cart-sidebar { width: 95%; right: -100%; border-radius: 20px; }
-            .search-box { flex-direction: column; border-radius: 20px; padding: 20px; }
+            header { border-radius: 30px; padding: 8px 15px; }
+            .carousel { border-radius: 25px; height: 45vh; margin: 80px 10px 10px 10px; }
+            .cart-sidebar { width: 95%; right: -100%; border-radius: 20px; max-width: 100%; }
+            .search-box { flex-direction: column; border-radius: 20px; padding: 15px; }
             .search-box .form-control { border-radius: 10px; background: var(--light-bg); }
             .search-box .btn-grad { border-radius: 10px; justify-content: center; }
             .map-container { height: 300px; }
-            .review-form-card { padding: 25px; }
+            .modal-content { grid-template-columns: 1fr; padding: 5px; gap: 5px; }
+            .modal-gallery { padding: 15px; }
+            .main-img { height: 250px; }
+            .modal-info { padding: 20px; max-height: none; }
+            .modal-info h2 { font-size: 1.5rem; }
+            .modal-info .price { font-size: 1.5rem; }
+            .checkout-content { grid-template-columns: 1fr; padding: 5px; }
+            .checkout-form-section { padding: 20px; border-radius: 20px; }
+            .checkout-summary-section { padding: 20px; }
+            .review-form-card { padding: 20px; }
+            .review-form-card h3 { font-size: 1.5rem; }
+            .reviews-display { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .section-title h2 { font-size: 1.6rem; }
+            .cta-section h2 { font-size: 1.8rem; }
+            .cta-section p { font-size: 1rem; }
+            .about-section { margin: 40px 10px; }
+            .about-grid { display: block; }
+            .about-text { padding: 30px 20px; }
+            .about-text h2 { font-size: 1.8rem; margin-bottom: 15px; }
+            .about-text p { font-size: 0.95rem; }
+            .about-img { display: none; }
+            .qty-presets { flex-direction: column; }
+            .qty-chip { width: 100%; }
+            .location-section { margin: 40px 0; }
+            .track-modal-content { padding: 30px 20px; width: 95%; max-width: 100%; }
+            .rating-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+            .stars-group { justify-content: flex-start; }
         }
     </style>
 </head>
@@ -457,12 +505,9 @@
 
     <section class="carousel">
         <div class="carousel-track" id="cTrack">
-            <div class="slide" style="background-image: url('https://i.postimg.cc/G2m4swN2/C-1.png');">
-            </div>
-            <div class="slide" style="background-image: url('https://i.postimg.cc/qRDzsDVJ/C-2.png');">
-            </div>
-            <div class="slide" style="background-image: url('https://i.postimg.cc/1t7fG7h5/C-3.png');">
-            </div>
+            <div class="slide" style="background-image: url('https://i.postimg.cc/G2m4swN2/C-1.png');"></div>
+            <div class="slide" style="background-image: url('https://i.postimg.cc/qRDzsDVJ/C-2.png');"></div>
+            <div class="slide" style="background-image: url('https://i.postimg.cc/1t7fG7h5/C-3.png');"></div>
         </div>
         <div class="carousel-dots">
             <div class="dot active" onclick="goToSlide(0)"></div>
@@ -544,7 +589,7 @@
                     <li style="margin-bottom: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--magenta); margin-right: 15px; font-size: 1.2rem;"></i> Fotografía Profesional</li>
                 </ul>
             </div>
-            <div class="about-img"></div>
+            <div class="about-img" style="background-image: url('https://i.postimg.cc/XJ1pf1Sc/CO-1.png');"></div>
         </div>
     </section>
 
